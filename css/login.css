@@ -1,0 +1,36 @@
+.custom-button {
+    width: 100%; /* Atur lebar sesuai kebutuhan */
+}
+
+/* styles.css */
+.login-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.header {
+    background-color: #3d5b9a; /* Ganti dengan warna latar belakang yang Anda inginkan */
+    padding: 10px 0; /* Tambahkan padding sesuai kebutuhan */
+    height: 50px; /* Ganti dengan tinggi yang Anda inginkan */
+}
+
+.header-title {
+    color: #fff; /* Warna teks judul */
+    font-size: 24px; /* Ukuran teks judul */
+}
+.margin {
+    margin-top: 0.5em;
+}
+.margin_kanan{
+    margin-right: 1em;
+}
+.translate{
+    margin-top: 7em;
+    font-size: small;
+}
+.font_small{
+    font-size: small;
+}

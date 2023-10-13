@@ -1,0 +1,21 @@
+body {
+    background-color: #02103f71;
+}
+.login-container {
+    margin-top: 100px;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(250, 249, 249, 0.1);
+}
+.card-header {
+    background-color: #d4e72b;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+.card-body {
+    padding: 20px;
+}

